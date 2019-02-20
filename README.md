@@ -1,2 +1,2 @@
 # blog
-Exercice  'Ajout des posts dans votre blog'
+Exercice http://exercices.openclassrooms.com 'Ajout des posts dans votre blog'
