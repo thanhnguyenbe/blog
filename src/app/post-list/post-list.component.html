@@ -1,0 +1,37 @@
+<!--exercices openclassrooms.com Nguyen thi -->
+
+<div style="text-align:center">
+  <h1 style="padding: 50px">
+    {{ projectTitle }}
+  </h1>
+</div>
+
+  <div class="container">
+
+  <div class="list-group">
+
+    <div *ngFor="let blog of blogs; let i = index"
+              (click)="onViewBlog(i)"
+              style="cursor: hand; cursor: pointer; margin:1em"
+              [ngClass]="{'list-group-item': true, 'list-group-item-success':  getLoveIts(i) > 0, 'list-group-item-danger': getLoveIts(i) < 0}">
+      <div style="color:black; text-align:right">
+        {{blog.created | date: 'dd-MM-yyyy hh:mm a'}}
+      </div>
+      <div style="font-size: 24pt">
+        {{ blog.title }}
+      </div>
+      <div>{{ blog.content }}
+        <p></p>
+      </div>
+      <div>
+        <button class="btn btn-success btn-sm" (click)="clickButtonLoveIts(i)" >Love it</button>
+        {{aBlanc}}
+        <button class="btn btn-danger btn-sm" (click)="clickButtonNotLoveIts(i)" >Don't love it</button>
+        <button class="btn btn-danger btn-sm pull-right" (click)="onDeleteBlog(i)" >Supprimer post</button>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+

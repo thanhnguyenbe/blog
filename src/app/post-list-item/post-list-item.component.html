@@ -1,0 +1,23 @@
+<!-- exercices openclassrooms.com Nguyen thi -->
+
+<div class="row">
+
+    <div class="col-xs-12">
+        <p style="color:black; text-align:right">
+            {{ blog.created | date: 'dd-MM-yyyy hh:mm a'}}
+        </p>
+        <h1 class="text-primary">{{ blog.title }}</h1>
+        <h4 class="text-secondary">{{ blog.content }}</h4>
+
+        <p>
+            <button
+                class="btn btn-primary"
+                (click)="onBack()"
+            >
+                Retour
+            </button>
+        </p>
+
+    </div>
+
+</div>
